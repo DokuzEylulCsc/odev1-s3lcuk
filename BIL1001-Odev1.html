@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>SelÃ§uk Demir 2018280013</title>
+</head>
 <body>
-<h2>2019 Güz Döneminin ilk ödevi</h2>
+<h2>2019 GÃ¼z DÃ¶neminin ilk Ã¶devi SelÃ§uk Demir 2018280013</h2>
 <label for="id1">Metin kutusu 1</label>
-<input type='text' id='id1' /> 
+<input type='text' onkeypress='return event.keyCode >= 48 && event.keyCode <= 57' id='id1' />
 <br>
 <label for="id2">Metin kutusu 2</label>
-<input type='text' id='id2' /> 
-<br><br>
-<button type="button">Topla</button>
-<br><br>
+<input type='text' onkeypress='return event.keyCode >= 48 && event.keyCode <= 57' id='id2' />
+<br>
+    <button type="button" onclick="topla(document.getElementById('id1').value, document.getElementById('id2').value);">Topla</button>
+    <script>
+        function topla(id1, id2) {
+            alert(parseInt(id1) + parseInt(id2));
+        }
+    </script>
+<br>
 <label for="id3">Metin kutusu 3</label>
-<input type='text' id='id3' /> 
+<input type='text' id='id3' />
 <br>
 <label for="id4">Metin kutusu 4</label>
-<input type='text' id='id4' /> 
-<br><br>
-<button type="button">Yapýþtýr</button>
+<input type='text' id='id4' />
+<br>
+<button type="button" onclick="yapistir(document.getElementById('id3').value, document.getElementById('id4').value);">YapÄ±ÅŸtÄ±r</button>
+<script>
+        function yapistir(id3, id4){
+		alert(document.getElementById('id3').value + document.getElementById('id4').value);
+        }
+</script>
 </body>
 </html>
